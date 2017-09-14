@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UdemyXamarin.QuotesPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0"/>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center">
+            <Button WidthRequest="400" Clicked="Button_Clicked" Text="Next"/>
+            <Label BindingContext="{x:Reference slider}" Text="{Binding Value, StringFormat='Font size {0:N0}'}" FontSize="{Binding Value}" x:Name="label"/>
+            <Slider x:Name="slider" Maximum="50" Minimum="16"/>
+            <Label x:Name="currentQuote"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
