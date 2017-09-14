@@ -13,7 +13,7 @@ namespace UdemyXamarin
         {
             InitializeComponent();
 
-            MainPage = new UdemyXamarin.MainPage();
+            MainPage = new GreetPage();
         }
 
         protected override void OnStart()
