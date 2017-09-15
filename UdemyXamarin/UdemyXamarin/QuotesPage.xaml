@@ -6,11 +6,11 @@
         <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0"/>
     </ContentPage.Padding>
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="Center">
+        <StackLayout HorizontalOptions="Center" BindingContext="{x:Reference slider}">
             <Button WidthRequest="400" Clicked="Button_Clicked" Text="Next"/>
-            <Label BindingContext="{x:Reference slider}" Text="{Binding Value, StringFormat='Font size {0:N0}'}" FontSize="{Binding Value}" x:Name="label"/>
+            <Label Text="{Binding Value, StringFormat='Font size {0:N0}'}" x:Name="label"/>
             <Slider x:Name="slider" Maximum="50" Minimum="16"/>
-            <Label x:Name="currentQuote"/>
+            <Label x:Name="currentQuote" FontSize="{Binding Value}"/>
         </StackLayout>
     </ContentPage.Content>
-</ContentPage>
+</ContentPage> 
