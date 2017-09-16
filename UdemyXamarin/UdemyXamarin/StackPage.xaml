@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UdemyXamarin.StackPage"
+             Padding="0, 20, 0, 0">
+    <ContentPage.Content>
+        <!--<StackLayout BackgroundColor="Yellow" VerticalOptions="Center" Spacing="20" HorizontalOptions="Center" Padding="40" Orientation="Horizontal">
+            <StackLayout>
+                <Image Source="http://placehold.it/100x100"/>
+                <Label Text="Label 1" BackgroundColor="Green"/>
+            </StackLayout>
+            <Label Text="Label 2" BackgroundColor="Silver"/>
+            <Label Text="Label 3" BackgroundColor="Firebrick"/>
+        </StackLayout>-->
+    </ContentPage.Content>
+</ContentPage>

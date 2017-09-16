@@ -12,8 +12,7 @@ namespace UdemyXamarin
         public App()
         {
             InitializeComponent();
-
-            MainPage = new QuotesPage();
+            MainPage = new AbsoluteExercise1Page();
         }
 
         protected override void OnStart()
