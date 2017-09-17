@@ -59,6 +59,7 @@
     <Compile Include="ImagePage.xaml.cs">
       <DependentUpon>ImagePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MarkupExtensions\EmbeddedImage.cs" />
     <Compile Include="RelativeExercise1Page.xaml.cs">
       <DependentUpon>RelativeExercise1Page.xaml</DependentUpon>
     </Compile>
@@ -194,8 +195,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\background.jpg" />
+    <EmbeddedResource Include="Images\background.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
