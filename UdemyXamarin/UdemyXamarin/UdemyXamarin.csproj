@@ -56,6 +56,12 @@
     <Compile Include="AbsolutePage.xaml.cs">
       <DependentUpon>AbsolutePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RelativeExercise1Page.xaml.cs">
+      <DependentUpon>RelativeExercise1Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RelativePage.xaml.cs">
+      <DependentUpon>RelativePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StackExcercise2Page.xaml.cs">
       <DependentUpon>StackExcercise2Page.xaml</DependentUpon>
     </Compile>
@@ -162,6 +168,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AbsoluteExercise2Page.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RelativePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RelativeExercise1Page.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -12,7 +12,7 @@ namespace UdemyXamarin
         public App()
         {
             InitializeComponent();
-            MainPage = new AbsoluteExercise1Page();
+            MainPage = new RelativeExercise1Page();
         }
 
         protected override void OnStart()
