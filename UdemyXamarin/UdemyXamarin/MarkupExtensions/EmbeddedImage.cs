@@ -8,15 +8,17 @@ using Xamarin.Forms;
 
 namespace UdemyXamarin.MarkupExtensions
 {
-    class EmbeddedImage : IMarkupExtension<ImageSource>
+    [ContentProperty("ResourceId")]
+    class EmbeddedImage : IMarkupExtension
     {
-        [ContentProperty("ResourceId")]
         public string ResourceId { get; set; }
-        public ImageSource ProvideValue(IServiceProvider serviceProvider)
+
+        public object ProvideValue(IServiceProvider serviceProvider)
         {
             if (string.IsNullOrWhiteSpace(ResourceId))
                 return null;
             return ImageSource.FromResource("UdemyXamarin.Images.background.jpg");
         }
+
     }
 }

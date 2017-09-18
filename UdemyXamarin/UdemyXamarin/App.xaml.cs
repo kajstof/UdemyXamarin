@@ -12,7 +12,7 @@ namespace UdemyXamarin
         public App()
         {
             InitializeComponent();
-            MainPage = new ImagePage();
+            MainPage = new ImageCirclePage();
         }
 
         protected override void OnStart()

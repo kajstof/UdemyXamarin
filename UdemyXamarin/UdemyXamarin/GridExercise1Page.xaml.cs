@@ -9,13 +9,13 @@ using Xamarin.Forms.Xaml;
 
 namespace UdemyXamarin
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class GridExercise1Page : ContentPage
-	{
-		public GridExercise1Page ()
-		{
-			InitializeComponent ();
-		}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class GridExercise1Page : ContentPage
+    {
+        public GridExercise1Page()
+        {
+            InitializeComponent();
+        }
 
         private void Button_Clicked(object sender, EventArgs e)
         {

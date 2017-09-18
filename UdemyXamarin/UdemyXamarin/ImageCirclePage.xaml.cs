@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace UdemyXamarin
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class StackExcercise1Page : ContentPage
+    public partial class ImageCirclePage : ContentPage
     {
-        public StackExcercise1Page()
+        public ImageCirclePage()
         {
             InitializeComponent();
         }

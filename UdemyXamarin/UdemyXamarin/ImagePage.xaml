@@ -5,6 +5,11 @@
              x:Class="UdemyXamarin.ImagePage"
              BackgroundColor="Black">
     <ContentPage.Content>
-        <Image Source="{local:EmbeddedImage UdemyXamarin.Images.background.jpg}" x:Name="image" Aspect="AspectFill"/>
+        <!--<Image Source="{local:EmbeddedImage UdemyXamarin.Images.background.jpg}" x:Name="image" Aspect="AspectFill"/>-->
+        <Button x:Name="btn">
+            <Button.Image>
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="clock.png" Android="clock.png" WinPhone="Images/clock.png" />
+            </Button.Image>
+        </Button>
     </ContentPage.Content>
 </ContentPage>

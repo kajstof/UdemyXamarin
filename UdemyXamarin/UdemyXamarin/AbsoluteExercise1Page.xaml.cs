@@ -9,12 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace UdemyXamarin
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class AbsoluteExercise1Page : ContentPage
-	{
-		public AbsoluteExercise1Page ()
-		{
-			InitializeComponent ();
-		}
-	}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class AbsoluteExercise1Page : ContentPage
+    {
+        public AbsoluteExercise1Page()
+        {
+            InitializeComponent();
+        }
+    }
 }
