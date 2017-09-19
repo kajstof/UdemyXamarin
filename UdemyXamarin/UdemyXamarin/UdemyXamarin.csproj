@@ -59,6 +59,9 @@
     <Compile Include="ImageCirclePage.xaml.cs">
       <DependentUpon>ImageCirclePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ImageExercise.xaml.cs">
+      <DependentUpon>ImageExercise.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ImagePage.xaml.cs">
       <DependentUpon>ImagePage.xaml</DependentUpon>
     </Compile>
@@ -205,6 +208,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ImageCirclePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ImageExercise.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

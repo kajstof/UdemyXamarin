@@ -110,6 +110,14 @@
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\drawable\left.png" />
+    <AndroidResource Include="Resources\drawable\right.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\left.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\right.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\left.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\right.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\left.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\right.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon.png" />
