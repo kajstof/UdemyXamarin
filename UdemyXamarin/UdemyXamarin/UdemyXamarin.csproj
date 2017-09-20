@@ -65,7 +65,11 @@
     <Compile Include="ImagePage.xaml.cs">
       <DependentUpon>ImagePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ListViewPage.xaml.cs">
+      <DependentUpon>ListViewPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MarkupExtensions\EmbeddedImage.cs" />
+    <Compile Include="Models\Contact.cs" />
     <Compile Include="RelativeExercise1Page.xaml.cs">
       <DependentUpon>RelativeExercise1Page.xaml</DependentUpon>
     </Compile>
@@ -214,6 +218,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ImageExercise.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ListViewPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
