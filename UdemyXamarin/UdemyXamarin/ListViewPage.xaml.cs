@@ -16,10 +16,17 @@ namespace UdemyXamarin
         {
             InitializeComponent();
 
-            var names = new List<Contact>
+            var names = new List<ContactGroup>
             {
-                new Contact {Name="Kajstof",ImageUrl="http://lorempixel.com/100/100/people/1" },
-                new Contact {Name="Krzyś", ImageUrl="http://lorempixel.com/100/100/people/2", Status="Hey, let's talk!"}
+                new ContactGroup("K", "K")
+                {
+                    new Contact {Name="Kajstof", ImageUrl="http://lorempixel.com/100/100/people/1" },
+                    new Contact {Name="Krzyś", ImageUrl="http://lorempixel.com/100/100/people/2", Status="Hey, let's talk!" }
+                },
+                new ContactGroup("L", "L")
+                {
+                    new Contact {Name="Lemming", ImageUrl="http://lorempixel.com/100/100/people/2", Status="Hey, let's talk!" }
+                }
             };
             listView.ItemsSource = names;
         }

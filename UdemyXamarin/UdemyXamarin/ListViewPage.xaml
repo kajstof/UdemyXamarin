@@ -7,10 +7,21 @@
     </ContentPage.Padding>
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="listView" SeparatorColor="Blue">
+            <ListView x:Name="listView" SeparatorColor="Blue" HasUnevenRows="True" IsGroupingEnabled="True" GroupDisplayBinding="{Binding Title}" GroupShortNameBinding="{Binding ShortTitle}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding Source}"
+                        <!--<TextCell Text="{Binding Name}" Detail="{Binding Status}" />-->
+                        <!--<ImageCell Text="{Binding Name}" Detail="{Binding Status}" ImageSource="{Binding ImageUrl}" />-->
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="5">
+                                <Image Source="{Binding ImageUrl}"/>
+                                <StackLayout HorizontalOptions="StartAndExpand">
+                                    <Label Text="{Binding Name}"/>
+                                    <Label Text="{Binding Status}" TextColor="Gray"/>
+                                </StackLayout>
+                                <Button Text="Follow"/>
+                            </StackLayout>
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

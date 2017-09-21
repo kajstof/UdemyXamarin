@@ -70,6 +70,7 @@
     </Compile>
     <Compile Include="MarkupExtensions\EmbeddedImage.cs" />
     <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\ContactGroup.cs" />
     <Compile Include="RelativeExercise1Page.xaml.cs">
       <DependentUpon>RelativeExercise1Page.xaml</DependentUpon>
     </Compile>
