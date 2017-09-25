@@ -16,7 +16,7 @@
                             <StackLayout Orientation="Horizontal" Padding="5">
                                 <Image Source="{Binding ImageUrl}"/>
                                 <StackLayout HorizontalOptions="StartAndExpand">
-                                    <Label Text="{Binding Name}"/>
+                                    <Label Text="{Binding Name}" TextColor="Blue" FontAttributes="Bold"/>
                                     <Label Text="{Binding Status}" TextColor="Gray"/>
                                 </StackLayout>
                                 <Button Text="Follow"/>

@@ -18,14 +18,14 @@ namespace UdemyXamarin
 
             var names = new List<ContactGroup>
             {
-                new ContactGroup("K", "K")
+                new ContactGroup("K-key", "K")
                 {
                     new Contact {Name="Kajstof", ImageUrl="http://lorempixel.com/100/100/people/1" },
                     new Contact {Name="Krzyś", ImageUrl="http://lorempixel.com/100/100/people/2", Status="Hey, let's talk!" }
                 },
-                new ContactGroup("L", "L")
+                new ContactGroup("L-key", "L")
                 {
-                    new Contact {Name="Lemming", ImageUrl="http://lorempixel.com/100/100/people/2", Status="Hey, let's talk!" }
+                    new Contact {Name="Lemming", ImageUrl="http://lorempixel.com/100/100/people/3", Status="Hey, let's talk!" }
                 }
             };
             listView.ItemsSource = names;
