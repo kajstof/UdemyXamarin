@@ -7,12 +7,18 @@
     </ContentPage.Padding>
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="listView" SeparatorColor="Blue" HasUnevenRows="True" IsGroupingEnabled="True" GroupDisplayBinding="{Binding Title}" GroupShortNameBinding="{Binding ShortTitle}">
+            <ListView x:Name="listView" SeparatorColor="Blue" HasUnevenRows="True" IsGroupingEnabled="True"
+                GroupDisplayBinding="{Binding Title}" GroupShortNameBinding="{Binding ShortTitle}"
+                ItemTapped="listView_ItemTapped" ItemSelected="listView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <!--<TextCell Text="{Binding Name}" Detail="{Binding Status}" />-->
                         <!--<ImageCell Text="{Binding Name}" Detail="{Binding Status}" ImageSource="{Binding ImageUrl}" />-->
                         <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Call" Clicked="Call_Clicked" CommandParameter="{Binding .}"/>
+                                <MenuItem Text="Delete" Clicked="Delete_Clicked" IsDestructive="True" CommandParameter="{Binding .}"/>
+                            </ViewCell.ContextActions>
                             <StackLayout Orientation="Horizontal" Padding="5">
                                 <Image Source="{Binding ImageUrl}"/>
                                 <StackLayout HorizontalOptions="StartAndExpand">
