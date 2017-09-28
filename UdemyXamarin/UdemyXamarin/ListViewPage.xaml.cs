@@ -56,8 +56,8 @@ namespace UdemyXamarin
         private void Delete_Clicked(object sender, EventArgs e)
         {
             var contact = (sender as MenuItem).CommandParameter as Contact;
-            contacts.Remove(contact);
-
+            //contacts.Remove(contact);
+            //contacts[contacts.FindIndex(c => c.ShortTitle.ToUpper()[0] == contact.Name.ToUpper()[0])].Remove(contact);
         }
     }
 }
