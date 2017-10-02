@@ -7,9 +7,10 @@
     </ContentPage.Padding>
     <ContentPage.Content>
         <StackLayout>
+            <SearchBar Placeholder="Search..." PlaceholderColor="CadetBlue" TextColor="Black" TextChanged="SearchBar_TextChanged"/>
             <ListView x:Name="listView" SeparatorColor="Blue" HasUnevenRows="True" IsGroupingEnabled="True"
                 GroupDisplayBinding="{Binding Title}" GroupShortNameBinding="{Binding ShortTitle}"
-                ItemTapped="listView_ItemTapped" ItemSelected="listView_ItemSelected">
+                ItemTapped="listView_ItemTapped" ItemSelected="listView_ItemSelected" IsPullToRefreshEnabled="True" Refreshing="listView_Refreshing">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <!--<TextCell Text="{Binding Name}" Detail="{Binding Status}" />-->
