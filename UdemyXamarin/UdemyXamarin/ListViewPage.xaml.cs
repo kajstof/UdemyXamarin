@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using UdemyXamarin.Models;
@@ -18,8 +19,7 @@ namespace UdemyXamarin
         public ListViewPage()
         {
             InitializeComponent();
-            contacts = GetContacts();
-            listView.ItemsSource = contacts;
+            listView.ItemsSource = contacts = new ObservableCollection<ContactGroup>(GetContacts());
         }
 
         private void listView_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -55,14 +55,13 @@ namespace UdemyXamarin
 
         private void listView_Refreshing(object sender, EventArgs e)
         {
-            contacts = GetContacts();
-            listView.ItemsSource = contacts;
+            listView.ItemsSource = contacts = new ObservableCollection<ContactGroup>(GetContacts());
             listView.EndRefresh();
         }
 
-        private ObservableCollection<ContactGroup> GetContacts(string searchText = null)
+        private IEnumerable<ContactGroup> GetContacts(string searchText = null)
         {
-            var contacts = new ObservableCollection<ContactGroup>
+            var contacts = new List<ContactGroup>
             {
                 new ContactGroup("K-key", "K")
                 {
@@ -98,15 +97,18 @@ namespace UdemyXamarin
             }
             else
             {
-                //var filteredContacts = contacts.Select(c => c..Where(c => c.Where(c2 => c2.ToString().StartsWith(searchText)))
-                //var filteredContacts = contacts.Where(c => c.Count > 0);
-                //return (ObservableCollection<ContactGroup>)filteredContacts;
+                var filteredContacts = contacts.Where(c => c.ShortTitle.ToString().ToUpper()[0] == searchText.ToUpper()[0]).ToArray();
+                for(int i = 0; i < filteredContacts.Length; i++)
+                {
+                    if (filteredContacts[i].nam)
+                }
+                return filteredContacts;
             }
         }
 
         private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            listView.ItemsSource = GetContacts(e.NewTextValue); ;
         }
     }
 }
