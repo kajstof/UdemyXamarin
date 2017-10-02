@@ -100,7 +100,7 @@ namespace UdemyXamarin
             {
                 //var filteredContacts = contacts.Select(c => c..Where(c => c.Where(c2 => c2.ToString().StartsWith(searchText)))
                 //var filteredContacts = contacts.Where(c => c.Count > 0);
-                return (ObservableCollection<ContactGroup>)filteredContacts;
+                //return (ObservableCollection<ContactGroup>)filteredContacts;
             }
         }
 
