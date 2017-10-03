@@ -14,12 +14,12 @@ namespace UdemyXamarin
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ListViewPage : ContentPage
     {
-        private ObservableCollection<ContactGroup> contacts;
+        private ObservableCollection<GroupContact> contacts;
 
         public ListViewPage()
         {
             InitializeComponent();
-            listView.ItemsSource = contacts = new ObservableCollection<ContactGroup>(GetContacts());
+            listView.ItemsSource = contacts = new ObservableCollection<GroupContact>(GetContacts());
         }
 
         private void listView_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -55,35 +55,35 @@ namespace UdemyXamarin
 
         private void listView_Refreshing(object sender, EventArgs e)
         {
-            listView.ItemsSource = contacts = new ObservableCollection<ContactGroup>(GetContacts());
+            listView.ItemsSource = contacts = new ObservableCollection<GroupContact>(GetContacts());
             listView.EndRefresh();
         }
 
-        private IEnumerable<ContactGroup> GetContacts(string searchText = null)
+        private IEnumerable<GroupContact> GetContacts(string searchText = null)
         {
-            var contacts = new List<ContactGroup>
+            var contacts = new List<GroupContact>
             {
-                new ContactGroup("K-key", "K")
+                new GroupContact("K-key", "K")
                 {
                     new Contact { Name = "Kajstof", ImageUrl = "http://lorempixel.com/100/100/people/1" },
                     new Contact { Name = "Krzyś", ImageUrl = "http://lorempixel.com/100/100/people/2", Status = "Hey, let's talk!" }
                 },
-                new ContactGroup("L-key", "L")
+                new GroupContact("L-key", "L")
                 {
                     new Contact { Name = "Lemming", ImageUrl = "http://lorempixel.com/100/100/people/3", Status = "Hey, let's talk again!" }
                 },
-                new ContactGroup("N-key", "N")
+                new GroupContact("N-key", "N")
                 {
                     new Contact { Name = "Natalia", ImageUrl = "http://lorempixel.com/100/100/people/4", Status = "What's my name!?" },
                     new Contact { Name = "Nikita", ImageUrl = "http://lorempixel.com/100/100/people/5", Status = "We are living in yellow submarine." }
                 },
-                new ContactGroup("P-key", "P")
+                new GroupContact("P-key", "P")
                 {
                     new Contact { Name = "Parabola", ImageUrl = "http://lorempixel.com/100/100/people/6", Status = "Nice coordinates!" },
                     new Contact { Name = "Picasso", ImageUrl = "http://lorempixel.com/100/100/people/7" },
                     new Contact { Name = "President", ImageUrl = "http://lorempixel.com/100/100/people/8", Status = "Republic of Poland!" }
                 },
-                new ContactGroup("Z-key", "Z")
+                new GroupContact("Z-key", "Z")
                 {
                     new Contact { Name = "Zorro", ImageUrl = "http://lorempixel.com/100/100/people/9", Status = "Where is Isaura?" },
                     new Contact { Name = "Zoltan", ImageUrl = "http://lorempixel.com/100/100/people/10", Status = "Hey, what are you looking for?" }
@@ -98,9 +98,15 @@ namespace UdemyXamarin
             else
             {
                 var filteredContacts = contacts.Where(c => c.ShortTitle.ToString().ToUpper()[0] == searchText.ToUpper()[0]).ToArray();
-                for(int i = 0; i < filteredContacts.Length; i++)
+                if (filteredContacts.Length > 0)
                 {
-                    if (filteredContacts[i].nam)
+                    for(int i = filteredContacts[0].Count - 1; i >= 0 ; i--)
+                    {
+                        if (!filteredContacts[0][i].Name.ToUpper().StartsWith(searchText.ToUpper()))
+                        {
+                            filteredContacts[0].RemoveAt(i);
+                        }
+                    }
                 }
                 return filteredContacts;
             }
