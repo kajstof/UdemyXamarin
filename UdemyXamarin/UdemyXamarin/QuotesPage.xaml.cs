@@ -12,8 +12,8 @@ namespace UdemyXamarin
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class QuotesPage : ContentPage
     {
-        int counter = 0;
-        string[] quotes = { "Wlazł kotek", "Na płotek", "I mruga", "Ładna to Piosenka", "Niedługa", "Niedługa, nie krótka", "Lecz w sam raz", "Zaśpiewaj koteczku", "Jeszcze raz" };
+        private int _counter = 0;
+        private string[] _quotes = { "Wlazł kotek", "Na płotek", "I mruga", "Ładna to Piosenka", "Niedługa", "Niedługa, nie krótka", "Lecz w sam raz", "Zaśpiewaj koteczku", "Jeszcze raz" };
 
         public QuotesPage()
         {
@@ -28,9 +28,9 @@ namespace UdemyXamarin
 
         private void NextSentence()
         {
-            currentQuote.Text = quotes[counter++];
-            if (counter > quotes.Length - 1)
-                counter = 0;
+            currentQuote.Text = _quotes[_counter++];
+            if (_counter > _quotes.Length - 1)
+                _counter = 0;
         }
     }
 }

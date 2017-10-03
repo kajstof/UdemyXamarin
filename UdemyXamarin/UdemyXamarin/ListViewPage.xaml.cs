@@ -14,12 +14,12 @@ namespace UdemyXamarin
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ListViewPage : ContentPage
     {
-        private ObservableCollection<GroupContact> contacts;
+        private ObservableCollection<ContactGroup> _contacts;
 
         public ListViewPage()
         {
             InitializeComponent();
-            listView.ItemsSource = contacts = new ObservableCollection<GroupContact>(GetContacts());
+            listView.ItemsSource = _contacts = new ObservableCollection<ContactGroup>(GetContacts());
         }
 
         private void listView_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -46,44 +46,44 @@ namespace UdemyXamarin
         {
             var contact = (sender as MenuItem).CommandParameter as Contact;
             //contacts.Remove(contact);
-            int index = contacts.ToList().FindIndex(c => c.ShortTitle.ToUpper()[0] == contact.Name.ToUpper()[0]);
-            int index2 = contacts[index].ToList().FindIndex(c => c == contact);
+            int index = _contacts.ToList().FindIndex(c => c.ShortTitle.ToUpper()[0] == contact.Name.ToUpper()[0]);
+            int index2 = _contacts[index].ToList().FindIndex(c => c == contact);
             //DisplayAlert("Element", $"contacts[{index}][{index2}]", "OK");
-            contacts[index].RemoveAt(index2);
-            if (contacts[index].Count == 0) { contacts.RemoveAt(index); }
+            _contacts[index].RemoveAt(index2);
+            if (_contacts[index].Count == 0) { _contacts.RemoveAt(index); }
         }
 
         private void listView_Refreshing(object sender, EventArgs e)
         {
-            listView.ItemsSource = contacts = new ObservableCollection<GroupContact>(GetContacts());
+            listView.ItemsSource = _contacts = new ObservableCollection<ContactGroup>(GetContacts());
             listView.EndRefresh();
         }
 
-        private IEnumerable<GroupContact> GetContacts(string searchText = null)
+        private IEnumerable<ContactGroup> GetContacts(string searchText = null)
         {
-            var contacts = new List<GroupContact>
+            var contacts = new List<ContactGroup>
             {
-                new GroupContact("K-key", "K")
+                new ContactGroup("K-key", "K")
                 {
                     new Contact { Name = "Kajstof", ImageUrl = "http://lorempixel.com/100/100/people/1" },
                     new Contact { Name = "Krzyś", ImageUrl = "http://lorempixel.com/100/100/people/2", Status = "Hey, let's talk!" }
                 },
-                new GroupContact("L-key", "L")
+                new ContactGroup("L-key", "L")
                 {
                     new Contact { Name = "Lemming", ImageUrl = "http://lorempixel.com/100/100/people/3", Status = "Hey, let's talk again!" }
                 },
-                new GroupContact("N-key", "N")
+                new ContactGroup("N-key", "N")
                 {
                     new Contact { Name = "Natalia", ImageUrl = "http://lorempixel.com/100/100/people/4", Status = "What's my name!?" },
                     new Contact { Name = "Nikita", ImageUrl = "http://lorempixel.com/100/100/people/5", Status = "We are living in yellow submarine." }
                 },
-                new GroupContact("P-key", "P")
+                new ContactGroup("P-key", "P")
                 {
                     new Contact { Name = "Parabola", ImageUrl = "http://lorempixel.com/100/100/people/6", Status = "Nice coordinates!" },
                     new Contact { Name = "Picasso", ImageUrl = "http://lorempixel.com/100/100/people/7" },
                     new Contact { Name = "President", ImageUrl = "http://lorempixel.com/100/100/people/8", Status = "Republic of Poland!" }
                 },
-                new GroupContact("Z-key", "Z")
+                new ContactGroup("Z-key", "Z")
                 {
                     new Contact { Name = "Zorro", ImageUrl = "http://lorempixel.com/100/100/people/9", Status = "Where is Isaura?" },
                     new Contact { Name = "Zoltan", ImageUrl = "http://lorempixel.com/100/100/people/10", Status = "Hey, what are you looking for?" }

@@ -65,18 +65,24 @@
     <Compile Include="ImagePage.xaml.cs">
       <DependentUpon>ImagePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ListExercisePage.xaml.cs">
+      <DependentUpon>ListExercisePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ListViewPage.xaml.cs">
       <DependentUpon>ListViewPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MarkupExtensions\EmbeddedImage.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\ContactGroup.cs" />
+    <Compile Include="Models\SearchGroup.cs" />
+    <Compile Include="Models\Search.cs" />
     <Compile Include="RelativeExercise1Page.xaml.cs">
       <DependentUpon>RelativeExercise1Page.xaml</DependentUpon>
     </Compile>
     <Compile Include="RelativePage.xaml.cs">
       <DependentUpon>RelativePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Services\SearchService.cs" />
     <Compile Include="StackExcercise2Page.xaml.cs">
       <DependentUpon>StackExcercise2Page.xaml</DependentUpon>
     </Compile>
@@ -225,6 +231,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ListViewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ListExercisePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

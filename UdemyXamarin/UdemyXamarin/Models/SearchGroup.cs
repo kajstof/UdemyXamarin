@@ -7,15 +7,12 @@ using System.Threading.Tasks;
 
 namespace UdemyXamarin.Models
 {
-    class ContactGroup : ObservableCollection<Contact>
+    class SearchGroup : ObservableCollection<Search>
     {
         public string Title { get; set; }
-        public string ShortTitle { get; set; }
-
-        public ContactGroup(string title, string shortTitle)
+        public SearchGroup(string title, IEnumerable<Search> searches = null) : base(searches)
         {
             Title = title;
-            ShortTitle = shortTitle;
         }
     }
 }
