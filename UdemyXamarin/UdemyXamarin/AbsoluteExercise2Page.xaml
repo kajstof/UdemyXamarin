@@ -17,7 +17,7 @@
                 Text="Relax" 
                 HorizontalOptions="Center" />
             <BoxView
-            BackgroundColor="Black"
+                BackgroundColor="Black"
                 Opacity="0.5"
                 HeightRequest="100"
                 AbsoluteLayout.LayoutBounds="0.5, 1, 1, 100"
