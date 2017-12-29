@@ -21,7 +21,8 @@ namespace UdemyXamarin
                 new Contact { Name = "Anna", ImageUrl = "http://lorempixel.com/100/100", Status = "Haha" },
                 new Contact { Name = "Kajstof", ImageUrl = "http://lorempixel.com/100/100" },
                 new Contact { Name = "Krzyś", ImageUrl = "http://lorempixel.com/100/100", Status = "Hello, I'm there" },
-                new Contact { Name = "Milena", ImageUrl = "http://lorempixel.com/100/100", Status = "My Honey" }
+                new Contact { Name = "Milena", ImageUrl = "http://lorempixel.com/100/100", Status = "My Honey" },
+                new Contact { Name = "Grzegorz", ImageUrl = "http://lorempixel.com/100/100", Status = "Hehe"}
             };
         }
 
