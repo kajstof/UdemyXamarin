@@ -27,7 +27,7 @@ namespace UdemyXamarin
             LoadImage();
         }
 
-        private void NextButton_Clicker(object sender, EventArgs e)
+        private void NextButton_Clicked(object sender, EventArgs e)
         {
             if (currentItem == 10) { currentItem = 1; }
             else { currentItem++; }

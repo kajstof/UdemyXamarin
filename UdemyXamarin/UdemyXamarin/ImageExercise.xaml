@@ -11,7 +11,7 @@
             <Image x:Name="image" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" />
             <Button Image="left.png" AbsoluteLayout.LayoutBounds="0.05, 0.05, 100, 100" AbsoluteLayout.LayoutFlags="PositionProportional" Clicked="PreviousButton_Clicked" x:Name="Prev" />
             <ActivityIndicator IsRunning="{Binding Source={x:Reference image}, Path=IsLoading}" AbsoluteLayout.LayoutBounds="0.5, 0.05, 100, 100" AbsoluteLayout.LayoutFlags="PositionProportional" />
-            <Button Image="right.png" AbsoluteLayout.LayoutBounds="0.95, 0.05, 100, 100" AbsoluteLayout.LayoutFlags="PositionProportional" Clicked="NextButton_Clicker" x:Name="Next" />
+            <Button Image="right.png" AbsoluteLayout.LayoutBounds="0.95, 0.05, 100, 100" AbsoluteLayout.LayoutFlags="PositionProportional" Clicked="NextButton_Clicked" x:Name="Next" />
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

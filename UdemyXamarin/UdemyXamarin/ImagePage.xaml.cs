@@ -15,6 +15,13 @@ namespace UdemyXamarin
         public ImagePage()
         {
             InitializeComponent();
+            //var imageSource = (UriImageSource)ImageSource.FromUri(new Uri("http://....."));
+            //var imageSource = new UriImageSource { Uri = new Uri("http://lorempixel.com/1920/1080/sports/3") };
+            //imageSource.CachingEnabled = true;  // Default 24 hours
+            //imageSource.CacheValidity = TimeSpan.FromHours(1);
+            //image.Source = imageSource;
+            //image.Source = "http://lorempixel.com/1920/1080/people/1";  // implicit conversion to ImageSource
+
             //image.Source = ImageSource.FromResource("UdemyXamarin.Images.background.jpg");
             //btn.Image = (FileImageSource)ImageSource.FromFile(Device.OnPlatform(
             //    iOS: "clock.png",

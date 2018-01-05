@@ -17,7 +17,7 @@ namespace UdemyXamarin.MarkupExtensions
         {
             if (string.IsNullOrWhiteSpace(ResourceId))
                 return null;
-            return ImageSource.FromResource("UdemyXamarin.Images.background.jpg");
+            return ImageSource.FromResource(ResourceId);
         }
 
     }
