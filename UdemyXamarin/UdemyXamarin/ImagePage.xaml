@@ -12,11 +12,13 @@
             <Image Source="http://lorempixel.com/1920/1080/sports/5/" x:Name="image" Aspect="AspectFill" 
                    AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
         </AbsoluteLayout>-->
-        <Image Source="{local:EmbeddedImage ResourceId=UdemyXamarin.Images.background.jpg}" x:Name="image" Aspect="AspectFill"/>
-        <!--<Button x:Name="btn">
+        <!--<Image Source="{local:EmbeddedImage UdemyXamarin.Images.background.jpg}" x:Name="image" Aspect="AspectFill"/>-->
+        <!--<Image Source="{local:EmbeddedImage ResourceId=UdemyXamarin.Images.background.jpg}" x:Name="image" Aspect="AspectFill"/>-->
+        <!--<Button Image="clock.png" />-->
+        <Button x:Name="btn">
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource" iOS="clock.png" Android="clock.png" WinPhone="Images/clock.png" />
             </Button.Image>
-        </Button>-->
+        </Button>
     </ContentPage.Content>
 </ContentPage>
