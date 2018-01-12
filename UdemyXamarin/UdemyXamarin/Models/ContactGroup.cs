@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace UdemyXamarin.Models
 {
+    //class ContactGroup : List<Contact>
     class ContactGroup : ObservableCollection<Contact>
     {
         public string Title { get; set; }
