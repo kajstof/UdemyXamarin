@@ -8,9 +8,14 @@
             <ic:CircleImage WidthRequest="100" HeightRequest="100" Aspect="AspectFill"
                             Source="http://placekitten.com/g/400/300" 
                             HorizontalOptions="Center" VerticalOptions="Center"/>
-            <BoxView BackgroundColor="Black"
+            <BoxView BackgroundColor="Red"
                      HeightRequest="160"
                      WidthRequest="160"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center" />
+            <BoxView BackgroundColor="Black"
+                     HeightRequest="50"
+                     WidthRequest="50"
                      VerticalOptions="Center"
                      HorizontalOptions="Center" />
         </StackLayout>
