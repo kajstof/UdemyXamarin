@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:local="clr-namespace:UdemyXamarin"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UdemyXamarin.TabbedPage1">
+  <!--Pages can be added as references or inline-->
+    <local:ContactsPage Title="Contacts" Icon="clock.png" />
+    <NavigationPage Title="Page 1" Icon="clock.png">
+        <x:Arguments>
+            <local:ImageExercise />
+        </x:Arguments>
+    </NavigationPage>
+    <ContentPage Title="Page 2" Icon="clock.png">
+        <Label Text="Content of Page 2" HorizontalOptions="Center" VerticalOptions="Center" />
+    </ContentPage>
+</TabbedPage>
