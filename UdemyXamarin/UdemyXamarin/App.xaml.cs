@@ -12,10 +12,11 @@ namespace UdemyXamarin
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new WelcomePage()) {
-                BarBackgroundColor = Color.Gray,
-                BarTextColor = Color.White
-            };
+            //MainPage = new NavigationPage(new WelcomePage()) {
+            //    BarBackgroundColor = Color.Gray,
+            //    BarTextColor = Color.White
+            //};
+            MainPage = new ContactsPage();
         }
 
         protected override void OnStart()

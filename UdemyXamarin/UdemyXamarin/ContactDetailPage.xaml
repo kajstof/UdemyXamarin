@@ -9,7 +9,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Image Source="{Binding ImageUrl}" />
-            <Label Text="{Binding Name}" />
+            <Label Text="{Binding Name}" TextColor="Blue" />
             <Label Text="{Binding Status}" />
         </StackLayout>
     </ContentPage.Content>

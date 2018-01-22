@@ -32,8 +32,8 @@ namespace UdemyXamarin
             var contact = e.SelectedItem as Contact;
             //await Navigation.PushAsync(new ContactDetailPage(contact));
             //listView.SelectedItem = null;
-            Detail = new ContactDetailPage(contact);
-            IsPresented = false;
+            Detail = new NavigationPage(new ContactDetailPage(contact));
+            IsPresented = false;    // IsMasterPresented
         }
     }
 }
