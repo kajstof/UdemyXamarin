@@ -16,7 +16,8 @@ namespace UdemyXamarin
             //    BarBackgroundColor = Color.Gray,
             //    BarTextColor = Color.White
             //};
-            MainPage = new TabbedPage1();
+            //MainPage = new TabbedPage1();
+            MainPage = new CarouselPage1();
         }
 
         protected override void OnStart()
