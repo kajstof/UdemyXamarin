@@ -20,7 +20,7 @@ namespace UdemyXamarin
             //MainPage = new CarouselPage1();
             //MainPage = new PopupsPage();
             //MainPage = new NavigationPage(new ToolbarItemsPage());
-            MainPage = new InstagramAppExercisePage();
+            MainPage = new NavigationPage(new InstagramAppExercisePage());
         }
 
         protected override void OnStart()

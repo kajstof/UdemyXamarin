@@ -2,8 +2,12 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:local="clr-namespace:UdemyXamarin"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="UdemyXamarin.InstagramAppExercisePage">
+             x:Class="UdemyXamarin.InstagramAppExercisePage"
+             NavigationPage.HasNavigationBar="False">
     <TabbedPage.Children>
-        <local:ActivitiesPage />
+        <local:ActivityFeedPage Title="Activities" Icon="heart.png" />
+        <ContentPage Title="My Profile" Icon="user.png" BackgroundColor="DarkBlue">
+            <Label HorizontalOptions="Center" VerticalOptions="Center" TextColor="White" FontSize="Large">My profile</Label>
+        </ContentPage>
     </TabbedPage.Children>
 </TabbedPage>

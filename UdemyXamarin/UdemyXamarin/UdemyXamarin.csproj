@@ -20,6 +20,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="ActiviFeedPage.xaml.cs">
+      <DependentUpon>ActiviFeedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="UserProfilePage.xaml.cs">
+      <DependentUpon>UserProfilePage.xaml</DependentUpon>
+    </Compile>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
       <DependentUpon>*.xaml</DependentUpon>
     </Compile>
@@ -29,10 +35,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="ActivitiesPage.xaml">
+    <EmbeddedResource Update="ActiviFeedPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="ActivitiesPageDetail.xaml">
+    <EmbeddedResource Update="UserProfilePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="InstagramAppExercisePage.xaml">
