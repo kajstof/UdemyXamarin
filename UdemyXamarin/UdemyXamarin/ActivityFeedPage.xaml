@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UdemyXamarin.ActivityFeedPage"
-             xmlns:ic="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             xmlns:ic="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              Title="Acitivity Feed">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0"/>
@@ -14,8 +14,8 @@
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Padding="5">
                             <ic:CircleImage WidthRequest="30" HeightRequest="30" Aspect="AspectFill"
-                                                    Source="{Binding ImageUrl}" 
-                                                    HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            Source="{Binding ImageUrl}"
+                                            HorizontalOptions="Center" VerticalOptions="Center"/>
                             <Label VerticalOptions="Center" Text="{Binding Description}" FontSize="Micro"/>
                         </StackLayout>
                     </ViewCell>

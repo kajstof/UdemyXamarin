@@ -15,13 +15,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="2.0.1" />
-    <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
+    <PackageReference Include="Xamarin.Forms" Version="3.3.0.967583" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="ActiviFeedPage.xaml.cs">
-      <DependentUpon>ActiviFeedPage.xaml</DependentUpon>
+    <Compile Update="ActivityFeedPage.xaml.cs">
+      <DependentUpon>ActivityFeedPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="UserProfilePage.xaml.cs">
       <DependentUpon>UserProfilePage.xaml</DependentUpon>
@@ -35,7 +35,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="ActiviFeedPage.xaml">
+    <EmbeddedResource Update="ActivityFeedPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="UserProfilePage.xaml">
