@@ -5,21 +5,19 @@
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
     </ContentPage.Padding>
-    <ContentView.Content>
-        <StackLayout>
-            <SearchBar x:Name="searchBar" Placeholder="Search..." TextChanged="SearchBar_TextChanged" />
-            <ListView x:Name="listView" IsGroupingEnabled="True" GroupDisplayBinding="{Binding Title}"
-                IsPullToRefreshEnabled="True" Refreshing="listView_Refreshing" ItemSelected="listView_ItemSelected">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <TextCell Text="{Binding Location}" Detail="{Binding Period}">
-                            <TextCell.ContextActions>
-                                <MenuItem Text="Delete" Clicked="Delete_Clicked" IsDestructive="True" CommandParameter="{Binding .}"/>
-                            </TextCell.ContextActions>
-                        </TextCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
-    </ContentView.Content>
+      <StackLayout>
+          <SearchBar x:Name="searchBar" Placeholder="Search..." TextChanged="SearchBar_TextChanged" />
+          <ListView x:Name="listView" IsGroupingEnabled="True" GroupDisplayBinding="{Binding Title}"
+              IsPullToRefreshEnabled="True" Refreshing="listView_Refreshing" ItemSelected="listView_ItemSelected">
+              <ListView.ItemTemplate>
+                  <DataTemplate>
+                      <TextCell Text="{Binding Location}" Detail="{Binding Period}">
+                          <TextCell.ContextActions>
+                              <MenuItem Text="Delete" Clicked="Delete_Clicked" IsDestructive="True" CommandParameter="{Binding .}"/>
+                          </TextCell.ContextActions>
+                      </TextCell>
+                  </DataTemplate>
+              </ListView.ItemTemplate>
+          </ListView>
+      </StackLayout>
 </ContentPage>
