@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:extensions="clr-namespace:UdemyXamarin.Extensions;assembly=UdemyXamarin"
+             x:Class="UdemyXamarin.Forms2Page"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Picker x:Name="contactMethods" Title="Contact" BackgroundColor="Aquamarine" SelectedIndexChanged="Picker_OnSelectedIndexChanged">
+                <!--<Picker.Items>
+                    <x:String>SMS</x:String>
+                    <x:String>Email</x:String>
+                </Picker.Items>-->
+            </Picker>
+            <DatePicker Date="{x:Static x:DateTime.Today}" Format="d MMM yyyy" MinimumDate="1 Jan 2018" MaximumDate="30 Jan 2030" DateSelected="DatePicker_OnDateSelected"/>
+            <TimePicker Time="13:00" />
+            <TableView Intent="Form">
+                <TableView.Root>
+                    <TableRoot>
+                        <TableSection Title="Basics">
+                            <TextCell Text="Name" Detail="Krzysio Misio" />
+                            <EntryCell Label="Title" Placeholder="(eg. Shopping)" Completed="EntryCell_OnCompleted" />
+                            <SwitchCell Text="Notifications" On="True" OnChanged="SwitchCell_OnOnChanged"/>
+                            <extensions:DateCell Label="Starts" />
+                            <extensions:DateCell Label="Ends" />
+                            <ViewCell Tapped="Cell_OnTapped">
+                                <StackLayout Orientation="Horizontal" Padding="13, 5">
+                                    <Label Text="Contact Method" VerticalOptions="Center" />
+                                    <Label 
+                                        x:Name="contactMethod"
+                                        VerticalOptions="Center" 
+                                        HorizontalOptions="EndAndExpand" 
+                                        Text="Contact Method" 
+                                        TextColor="Gray" />
+                                </StackLayout>
+                            </ViewCell>
+                        </TableSection>
+                    </TableRoot>
+                </TableView.Root>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

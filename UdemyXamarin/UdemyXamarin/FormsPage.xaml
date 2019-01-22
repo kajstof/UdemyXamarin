@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage Padding="40"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UdemyXamarin.FormsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Switch IsToggled="True" Toggled="Switch_OnToggled" />
+            <Label Text="Content" x:Name="label" />
+            <Switch IsToggled="True" x:Name="switch" />
+            <Label Text="Content2" IsVisible="{Binding Source={x:Reference switch}, Path=IsToggled}"></Label>
+            <Slider Minimum="0" Maximum="40" Value="20" x:Name="slider" ValueChanged="Slider_OnValueChanged" />
+            <Label Text="{Binding Source={x:Reference slider}, Path=Value, StringFormat='{0:N0}'}"/>
+            <Stepper Minimum="0" Maximum="20" Increment="5" x:Name="stepper" />
+            <Label Text="{Binding Source={x:Reference stepper}, Path=Value}"/>
+            <Entry Keyboard="Numeric" Placeholder="Phone" />
+            <Entry IsPassword="True" Completed="Entry_OnCompleted" TextChanged="Entry_OnTextChanged" />
+            <Label x:Name="labelEntry"/>
+            <Editor BackgroundColor="YellowGreen" VerticalOptions="FillAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
