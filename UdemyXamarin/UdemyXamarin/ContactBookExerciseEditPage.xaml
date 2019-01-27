@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UdemyXamarin.ContactBookExerciseEditPage">
+    <ContentPage.Content>
+        <TableView Intent="Form">
+            <TableRoot>
+                <TableSection Title="Name">
+                    <EntryCell Label="First Name" LabelColor="Gray" Placeholder="eg. Hannah" Text="{Binding FirstName}" />
+                    <EntryCell Label="Last Name" LabelColor="Gray" Placeholder="eg. Barbara" Text="{Binding LastName}" />
+                </TableSection>
+                <TableSection Title="Contact">
+                    <EntryCell Label="Phone" LabelColor="Gray" Placeholder="eg. +48 1234567890" Text="{Binding Phone}" Keyboard="Numeric" />
+                    <EntryCell Label="Email" LabelColor="Gray" Placeholder="eg. abc@abc.abc" Text="{Binding Email}" Keyboard="Email" />
+                </TableSection>
+                <TableSection Title="Other">
+                    <SwitchCell Text="Blocked" On="{Binding IsBlocked}" />
+                </TableSection>
+                <TableSection>
+                    <ViewCell>
+                        <Button Text="Save" Clicked="Button_OnClicked" />
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

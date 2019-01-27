@@ -16,13 +16,15 @@ namespace UdemyXamarin
             //    BarBackgroundColor = Color.Gray,
             //    BarTextColor = Color.White
             //};
+            //MainPage = new ListViewPage();
             //MainPage = new TabbedPage1();
             //MainPage = new CarouselPage1();
             //MainPage = new PopupsPage();
             //MainPage = new NavigationPage(new ToolbarItemsPage());
             //MainPage = new NavigationPage(new InstagramAppExercisePage());
             //MainPage = new FormsPage();
-            MainPage = new NavigationPage(new Forms2Page());
+            //MainPage = new NavigationPage(new Forms2Page());
+            MainPage = new NavigationPage(new ContactBookExerciseMainPage());
         }
 
         protected override void OnStart()
