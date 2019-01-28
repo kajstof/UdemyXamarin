@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using HelloWorld;
 using Xamarin.Forms;
 
 namespace UdemyXamarin
 {
     public partial class App : Application
     {
+        private const string TitleKey = "Name";
+        private const string NotificationEnabledKey = "NotificationEnabled";
+
         public App()
         {
             InitializeComponent();
@@ -24,7 +27,8 @@ namespace UdemyXamarin
             //MainPage = new NavigationPage(new InstagramAppExercisePage());
             //MainPage = new FormsPage();
             //MainPage = new NavigationPage(new Forms2Page());
-            MainPage = new NavigationPage(new ContactBookExerciseMainPage());
+            //MainPage = new NavigationPage(new ContactBookExerciseMainPage());
+            MainPage = new DataAccessPage();
         }
 
         protected override void OnStart()
@@ -40,6 +44,35 @@ namespace UdemyXamarin
         protected override void OnResume()
         {
             // Handle when your app resumes
+        }
+
+        public string Title
+        {
+            get
+            {
+                if (Properties.ContainsKey(TitleKey))
+                {
+                    return Properties[TitleKey]?.ToString();
+                }
+
+                return string.Empty;
+            }
+            set => Properties[TitleKey] = value;
+        }
+
+        public bool NotificationEnabled
+        {
+            get
+            {
+                if (Properties.ContainsKey(NotificationEnabledKey))
+                {
+                    return (bool) Properties[NotificationEnabledKey];
+                }
+
+                return false;
+            }
+
+            set => Properties[TitleKey] = value;
         }
     }
 }
