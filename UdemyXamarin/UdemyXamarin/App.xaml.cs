@@ -28,7 +28,9 @@ namespace UdemyXamarin
             //MainPage = new FormsPage();
             //MainPage = new NavigationPage(new Forms2Page());
             //MainPage = new NavigationPage(new ContactBookExerciseMainPage());
-            MainPage = new DataAccessPage();
+            //MainPage = new DataAccessPage();
+            //MainPage = new SQLiteExamplePage();
+            MainPage = new RestfulServicePage();
         }
 
         protected override void OnStart()
