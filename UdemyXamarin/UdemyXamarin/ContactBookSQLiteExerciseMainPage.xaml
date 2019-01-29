@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UdemyXamarin.ContactBookSQLiteExerciseMainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="OnAddContact" />
+    </ContentPage.ToolbarItems>
+    <ListView x:Name="ContactBookListView"
+              ItemsSource="{Binding Items}"
+              ItemSelected="ContactBookListView_OnItemSelected"
+              CachingStrategy="RecycleElement">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.ContextActions>
+                        <MenuItem Text="Delete" IsDestructive="True" Clicked="MenuItemDelete_OnClicked" CommandParameter="{Binding .}" />
+                    </ViewCell.ContextActions>
+                    <StackLayout BindingContext="{Binding .}">
+                        <Label BindingContext="{Binding .}" Text="{Binding FullName}" TextColor="Black" />
+                        <Label Text="{Binding ID}" TextColor="CornflowerBlue" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

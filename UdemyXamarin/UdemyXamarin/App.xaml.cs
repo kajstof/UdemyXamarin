@@ -30,7 +30,8 @@ namespace UdemyXamarin
             //MainPage = new NavigationPage(new ContactBookExerciseMainPage());
             //MainPage = new DataAccessPage();
             //MainPage = new SQLiteExamplePage();
-            MainPage = new RestfulServicePage();
+            //MainPage = new RestfulServicePage();
+            MainPage = new NavigationPage(new ContactBookSQLiteExerciseMainPage());
         }
 
         protected override void OnStart()

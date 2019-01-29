@@ -26,6 +26,12 @@
     <Compile Update="ActivityFeedPage.xaml.cs">
       <DependentUpon>ActivityFeedPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="ContactBookSqLiteExerciseEditPage.xaml.cs">
+      <DependentUpon>ContactBookSQLiteExerciseEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="ContactBookSqLiteExerciseMainPage.xaml.cs">
+      <DependentUpon>ContactBookSQLiteExerciseMainPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="UserProfilePage.xaml.cs">
       <DependentUpon>UserProfilePage.xaml</DependentUpon>
     </Compile>
