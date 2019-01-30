@@ -26,11 +26,17 @@
     <Compile Update="ActivityFeedPage.xaml.cs">
       <DependentUpon>ActivityFeedPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="CarouselExamplePage.xaml.cs">
+      <DependentUpon>CarouselExamplePage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="ContactBookSqLiteExerciseEditPage.xaml.cs">
       <DependentUpon>ContactBookSQLiteExerciseEditPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="ContactBookSqLiteExerciseMainPage.xaml.cs">
       <DependentUpon>ContactBookSQLiteExerciseMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="TabbedExamplePage.xaml.cs">
+      <DependentUpon>TabbedExamplePage.xaml</DependentUpon>
     </Compile>
     <Compile Update="UserProfilePage.xaml.cs">
       <DependentUpon>UserProfilePage.xaml</DependentUpon>
@@ -71,7 +77,7 @@
     <EmbeddedResource Update="PopupsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="TabbedPage1.xaml">
+    <EmbeddedResource Update="TabbedExamplePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ToolbarItemsPage.xaml">

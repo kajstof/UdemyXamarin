@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace UdemyXamarin
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TabbedPage1 : TabbedPage
+    public partial class TabbedExamplePage : TabbedPage
     {
-        public TabbedPage1 ()
+        public TabbedExamplePage()
         {
             InitializeComponent();
             //this.Children.Add(new ContentPage());

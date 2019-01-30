@@ -22,21 +22,21 @@ namespace UdemyXamarin
             _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
         }
 
-        //private IEnumerable<ContactBookRecord> GetContacts()
-        //{
-        //    return new List<ContactBookRecord>
-        //    {
-        //        new ContactBookRecord { ID = 1, FirstName = "John", LastName = "Smith", Email = "abc@abc.abc", Phone = "+48 1234567890", IsBlocked = true },
-        //        new ContactBookRecord { ID = 2, FirstName = "Krzyś", LastName = "Miś", Email = "def@def.def", Phone = "+48 9876543210", IsBlocked = false },
-        //        new ContactBookRecord { ID = 3, FirstName = "Milena", LastName = "Córusia", Email = "def@def.def", Phone = "+48 9876543210", IsBlocked = false }
-        //    };
-        //}
+        private IEnumerable<ContactBookRecord> GetContacts()
+        {
+            return new List<ContactBookRecord>
+            {
+                new ContactBookRecord { ID = 1, FirstName = "John", LastName = "Smith", Email = "abc@abc.abc", Phone = "+48 1234567890", IsBlocked = true },
+                new ContactBookRecord { ID = 2, FirstName = "Krzyś", LastName = "Miś", Email = "def@def.def", Phone = "+48 9876543210", IsBlocked = false },
+                new ContactBookRecord { ID = 3, FirstName = "Milena", LastName = "Córusia", Email = "def@def.def", Phone = "+48 9876543210", IsBlocked = false }
+            };
+        }
 
         protected override async void OnAppearing()
         {
             await _connection.CreateTableAsync<ContactBookRecord>();
 
-            //await _connection.InsertAllAsync(GetContacts());
+            await _connection.InsertAllAsync(GetContacts());
 
             var contacts = await _connection.Table<ContactBookRecord>().ToListAsync();
             _contacts = new ObservableCollection<ContactBookRecord>(contacts);

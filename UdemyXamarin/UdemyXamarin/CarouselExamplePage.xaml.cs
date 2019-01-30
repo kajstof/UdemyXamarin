@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace UdemyXamarin
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CarouselPage1 : CarouselPage
+    public partial class CarouselExamplePage : CarouselPage
     {
-        public CarouselPage1()
+        public CarouselExamplePage()
         {
             InitializeComponent();
         }

@@ -20,7 +20,18 @@ namespace UdemyXamarin
         private async void Button_Clicked(object sender, EventArgs e)
         {
             //await Navigation.PushAsync(new IntroductionPage());
-            await Navigation.PushModalAsync(new IntroductionPage());
+            //await Navigation.PushModalAsync(new IntroductionPage());
+            string pageToLoad = (sender as Button)?.Text;
+            if (pageToLoad != null)
+            {
+                var pageName = $"{pageToLoad}Page";
+                var type = Type.GetType("UdemyXamarin." + pageName, true);
+                if (type != null)
+                {
+                    var instance = (Page)Activator.CreateInstance(type);
+                    await Navigation.PushModalAsync(new NavigationPage(instance));
+                }
+            }
         }
     }
 }

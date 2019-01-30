@@ -5,9 +5,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UdemyXamarin.WelcomePage">
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Label Text="Welcome" HorizontalOptions="Center" />
-            <Button Text="Next" Clicked="Button_Clicked" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="Welcome" HorizontalOptions="Center" />
+                <Button Text="Introduction" Clicked="Button_Clicked" />
+                <Button Text="Absolute" Clicked="Button_Clicked" />
+                <Button Text="AbsoluteExercise1" Clicked="Button_Clicked" />
+                <Button Text="AbsoluteExercise2" Clicked="Button_Clicked" />
+                <Button Text="ActivityFeed" Clicked="Button_Clicked" />
+                <Button Text="Carousel" Clicked="Button_Clicked" />
+                <Button Text="ContactBookExerciseMain" Clicked="Button_Clicked" />
+                <Button Text="ContactBookSQLiteExerciseMain" Clicked="Button_Clicked" />
+                <Button Text="ContactDetail" Clicked="Button_Clicked" />
+                <Button Text="DataAccess" Clicked="Button_Clicked" />
+                <Button Text="Forms" Clicked="Button_Clicked" />
+                <Button Text="Forms2" Clicked="Button_Clicked" />
+                <Button Text="Greet" Clicked="Button_Clicked" />
+                <Button Text="Grid" Clicked="Button_Clicked" />
+                <Button Text="GridExercise1" Clicked="Button_Clicked" />
+                <Button Text="GridExercise2" Clicked="Button_Clicked" />
+                <Button Text="Image" Clicked="Button_Clicked" />
+                <Button Text="ImageCircle" Clicked="Button_Clicked" />
+                <Button Text="ImageExercise" Clicked="Button_Clicked" />
+                <Button Text="InstagramAppExercise" Clicked="Button_Clicked" />
+                <Button Text="ListExercise" Clicked="Button_Clicked" />
+                <Button Text="ListView" Clicked="Button_Clicked" />
+                <Button Text="Main" Clicked="Button_Clicked" />
+                <Button Text="Popups" Clicked="Button_Clicked" />
+                <Button Text="Quotes" Clicked="Button_Clicked" />
+                <Button Text="Relative" Clicked="Button_Clicked" />
+                <Button Text="RelativeExercise1" Clicked="Button_Clicked" />
+                <Button Text="RestfulService" Clicked="Button_Clicked" />
+                <Button Text="Stack" Clicked="Button_Clicked" />
+                <Button Text="StackExercise1" Clicked="Button_Clicked" />
+                <Button Text="StackExercise2" Clicked="Button_Clicked" />
+                <Button Text="TabbedExample" Clicked="Button_Clicked" />
+                <Button Text="ToolbarItems" Clicked="Button_Clicked" />
+                <Button Text="UserProfile" Clicked="Button_Clicked" />
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
