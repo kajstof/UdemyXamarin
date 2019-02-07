@@ -15,7 +15,10 @@ namespace UdemyXamarin
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new WelcomePage());
+
+            // List of all pages
+            //MainPage = new NavigationPage(new WelcomePage());
+
             //MainPage = new NavigationPage(new WelcomePage()) {
             //    BarBackgroundColor = Color.Gray,
             //    BarTextColor = Color.White
@@ -33,6 +36,8 @@ namespace UdemyXamarin
             //MainPage = new SQLiteExamplePage();
             //MainPage = new RestfulServicePage();
             //MainPage = new NavigationPage(new ContactBookSQLiteExerciseMainPage());
+            //MainPage = new NavigationPage(new NetflixRoulette());
+            MainPage = new NavigationPage(new PlaylistsPage());
         }
 
         protected override void OnStart()
